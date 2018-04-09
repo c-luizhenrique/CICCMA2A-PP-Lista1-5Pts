@@ -4,7 +4,7 @@ public class Testes {
 	public static void main(String[] args) {
 		Metodos metodos = new Metodos();
 		// Questão 32
-		System.out.printf("%d\n",metodos.verifAlfabeto("ç"));
+		System.out.printf("%d\n",metodos.verifAlfabeto("Eita"));
 		// Questão 33
 		System.out.printf("%d\n",metodos.verifCapicua("3013103333"));
 		// Questão 34

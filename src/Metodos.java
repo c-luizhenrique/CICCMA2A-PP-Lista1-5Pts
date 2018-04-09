@@ -357,9 +357,13 @@ public class Metodos {
 		 * língua, ou melhor, encontrei um script que na teoria deveria funcionar, o
 		 * \p{IsLatin}, mas na prática não consegui reconhecer 'ç', 'ã' e etc, eu sei
 		 * que dá pra converter char em int e comparar com ASCII, mas tentei usar regex
-		 * por ser mais divertido
+		 * por ser mais divertido.
+		 * 
+		 * Edit 1: IsLatin funciona, agora não consigo fazer o operador "?" (zero ou um
+		 * caractere) funcionar propriamente. Inclui uma condição a mais para bypass
+		 * esse problema.
 		 */
-		if (Pattern.compile("\\w\\D").matcher(c).find() && c.length() == 1)
+		if (Pattern.compile("\\p{IsLatin}").matcher(c).find() && c.length()==1)
 			return 1;
 		else
 			return 0;
